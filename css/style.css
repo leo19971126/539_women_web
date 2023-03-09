@@ -4,7 +4,24 @@ body{
 }
 
 h1{
-    color: black;
+    color: #ffffff;
+    font-family: "ubuntu", monospace;
+    font-size: 2.5em;
+    padding-bottom: 2.5%;
+    padding-top: 40px;
+    text-align: center;
+    font-weight: bold;
+}
+
+h2{
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+h3{
+    font-weight: bold;
+    font-size: 1.25em;
+    /* margin: 5px; */
 }
 
 a.skip{
@@ -72,23 +89,14 @@ nav a:hover {
     border-radius: 5px;
 }
 
-/* li{
-    display: inline-block;
-} */
-
-/* a:link{
+.nav-link{
     color: white;
     text-decoration: none;
-} */
+}
 
-/* .nav-link{
-    color: white;
-    text-decoration: none;
-} */
-
-/* a:link:hover{
-    color: red;
-} */
+.bgimg{
+    background-image: url("../images/background_pic.gif");
+}
 
 .banner{
     width: 100%;
@@ -104,7 +112,44 @@ img{
     max-height: 500px;
 }
 
+.introGrid{
+    display: grid;
+    border-radius: 20px;
+    justify-content: center;
+    margin-top: 1%;
+    color: white;
+}
 
+.introGrid div{
+    /* display: flex; */
+    background-color: #383838;
+    margin-bottom: 1%;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 20px;
+}
+
+.introText{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    /* grid-template-columns: 1fr; */
+    position: relative;
+    margin: auto;
+    padding-left: 40%;
+    padding-right: 30%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    position: relative;
+}
+
+.introImg{
+    width: auto;
+    /* have the image move to the right side of the text in the dic */
+    align-items: flex-end;
+    
+}
 
 .grid div:nth-of-type(3n+1) img{
     /* Set box shadow */
@@ -165,7 +210,7 @@ img{
     position: relative;
     margin-right: 3%;
     padding-top: 3%;
-    padding-bottom: 4%;
+    padding-bottom: 3%;
     align-items: flex-start;
     position: relative;
     /* grid-row: 1; */
@@ -179,7 +224,7 @@ img{
 
 .container{
     display: flex;
-    grid-template-columns: 1fr 1fr;
+    /* grid-template-columns: 1fr 1fr; */
 }
 
 footer{
