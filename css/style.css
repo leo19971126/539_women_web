@@ -29,15 +29,17 @@ h1{
     }
 }
 
-
 h2{
     font-weight: bold;
     font-size: 1.5em;
+    padding-bottom: 2%;
 }
 
 h3{
     font-weight: bold;
     font-size: 1.25em;
+    padding-bottom: 1%;
+    padding-top: 2%;
     /* margin: 5px; */
 }
 
@@ -205,20 +207,6 @@ img{
     /* margin-bottom: 40%; */
 }
 
-.grid div{
-    /* Set border properties, padding, and background color */
-    /* border: 2px solid #000000; */
-    border-radius: 10px;
-    background-color: white;
-    color: black;
-    /* display: grid; */
-    /* display:flex;
-    justify-content: center;
-    align-items: center; */
-    /* display: grid;
-    grid-template-columns: repeat(2, 2fr); */
-}
-
 .grid img{
     /* Set width, margin, and display */
     display: block;
@@ -250,9 +238,14 @@ img{
 }
 
 .container{
-    display: flex;
+    display: grid;
     /* grid-template-columns: 1fr 1fr; */
     margin-bottom: 2%;
+    /* grid div */
+    border-radius: 10px;
+    background-color: white;
+    color: black;
+    padding: 2.5%;
 }
 
 footer{
@@ -325,6 +318,13 @@ footer{
         border-bottom: 5px solid #22b3e8;
         font-weight: bold;
         font-size: 1.1em;
+    }
+
+    .container{
+        display: flex;
+        border-radius: 10px;
+        background-color: white;
+        color: black;
     }
 }
 
