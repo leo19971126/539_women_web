@@ -3,6 +3,10 @@ body{
     color: #ffffff;
 }
 
+.animation:hover{
+    animation: rotate 2s ease-in-out;
+}
+
 h1{
     color: #ffffff;
     font-family: "ubuntu", monospace;
@@ -12,6 +16,19 @@ h1{
     text-align: center;
     font-weight: bold;
 }
+
+@keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(180deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+}
+
 
 h2{
     font-weight: bold;
@@ -26,6 +43,7 @@ h3{
 
 a.skip{
     background: white;
+    color: #000000;
     padding: 6px;
     -webkit-transition: top 1s ease-out;
     transition: left 1s ease-out;
@@ -44,18 +62,37 @@ nav a.current{
     text-transform: uppercase;
     border-bottom: 5px solid #22b3e8;
     font-weight: bold;
-    font-size: 1.1em;
+    font-size: 1.5em;
+}
+
+.bellHooks{
+    color: darkblue;
+    font-family: "ubuntu", monospace;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 2.5%;
+}
+
+.bellHooks:hover{
+    font-style: oblique;
+    text-decoration: underline;
+}
+
+a {
+    color: #22b3e8;
 }
 
 nav{
-    background-color: #282828;
-    font-size: 1.5em;
+    /* background-color: #282828; */
+    /* font-size: 1.5em; */
     margin-bottom: 20px;
     width:100%;
     overflow: auto;
     z-index: 999;
     padding-top: 1%;
     font-weight: lighter;
+    width: 100%;
 }
 
 /* nav ul li{
@@ -74,13 +111,14 @@ nav a:link, a:visited {
 nav a {
     box-shadow: inset 0 0 0 0 #54b3d6;
     transition: color .5s ease-in-out, box-shadow .5s ease-in-out;
-    float: right;
+    float: none;
     display: block;
     text-align: center;
     padding: 2%;
     text-decoration: none;
     font-size: 0.7vm;
 }
+
 
 nav a:hover {
     color: #000000;
@@ -158,12 +196,13 @@ img{
 
 .grid{
     /*Set width, margin, border properties, background color, and grid properties */
+    display: grid;
     width: 90%;
     margin: auto;
     border-radius: 25px;
-    display: grid;
     grid-column-gap: 5%;
     row-gap: 0.5%;
+    margin-bottom: 40%;
 }
 
 .grid div{
@@ -182,24 +221,12 @@ img{
 
 .grid img{
     /* Set width, margin, and display */
+    display: block;
     max-width: 60%;
     width: auto;
     margin: auto;
-    display: block;
-    /* grid-column: 1 / -1; */
     max-height: 500px;
     position: relative;
-    /* grid-row: 1 / -1; */
-}
-
-.grid div:nth-of-type(2n+1) img{
-    /* Set box shadow */
-    margin-left: 2%;
-}
-
-.grid div:nth-of-type(2n) img{
-    /* Set box shadow */
-    margin-right: 2%;
 }
 
 .text{
@@ -228,9 +255,80 @@ img{
 }
 
 footer{
-    margin: 20px;
+    /* display: flex; */
+    /* padding-top: 50%; */
+    padding-left: 5%;
+    padding-top: 7%;
 }
 
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 85%; 
+  }
+  
+  .close {
+    color: black;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
 @media screen and (min-width: 800px){
-    
+    nav{
+        background-color: #282828;
+        font-size: 1.5em;
+        margin-bottom: 20px;
+        width:100%;
+        overflow: auto;
+        z-index: 999;
+        padding-top: 1%;
+        font-weight: lighter;
+        display: inline-block;
+    }
+
+    nav a {
+        box-shadow: inset 0 0 0 0 #54b3d6;
+        transition: color .5s ease-in-out, box-shadow .5s ease-in-out;
+        float: right;
+        display: block;
+        text-align: center;
+        padding: 2%;
+        text-decoration: none;
+        font-size: 0.7vm;
+    }
+
+    nav a.current{
+        text-transform: uppercase;
+        border-bottom: 5px solid #22b3e8;
+        font-weight: bold;
+        font-size: 1.1em;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .animation {
+      animation: none !important;
+    }
 }
