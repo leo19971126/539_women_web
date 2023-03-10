@@ -168,7 +168,7 @@ img{
     padding-bottom: 20px;
 }
 
-.introText{
+.aboutText{
     display: grid;
     align-items: center;
     justify-content: center;
@@ -196,13 +196,13 @@ img{
 
 .grid{
     /*Set width, margin, border properties, background color, and grid properties */
-    display: grid;
+    /* display: grid; */
     width: 90%;
     margin: auto;
     border-radius: 25px;
     grid-column-gap: 5%;
     row-gap: 0.5%;
-    margin-bottom: 40%;
+    /* margin-bottom: 40%; */
 }
 
 .grid div{
@@ -252,13 +252,14 @@ img{
 .container{
     display: flex;
     /* grid-template-columns: 1fr 1fr; */
+    margin-bottom: 2%;
 }
 
 footer{
     /* display: flex; */
     /* padding-top: 50%; */
     padding-left: 5%;
-    padding-top: 7%;
+    padding-top: 20px;
 }
 
 .modal {
