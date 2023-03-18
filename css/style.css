@@ -43,6 +43,12 @@ h3 {
     /* margin: 5px; */
 }
 
+h4{
+    font-weight: bold;
+    font-size: 1.1em;
+    padding-bottom: 1%;
+}
+
 a.skip{
     /* background: white; */
     /* color: #000000; */
@@ -205,12 +211,6 @@ img{
     font-weight: bold;
 }
 
-.grid div:nth-of-type(2n){
-    /* move the image to the right and the text to the left */
-    display: flex;
-    flex-direction: row-reverse;
-}
-
 .grid{
     /*Set width, margin, border properties, background color, and grid properties */
     /* display: grid; */
@@ -232,16 +232,11 @@ img{
 }
 
 .text{
-    justify-content: center;
-    grid-template-columns: 1fr;
+    margin-bottom: 2%;
+    margin-left: 2%;
+    margin-right: 2%;
     position: relative;
-    margin-right: 3%;
     margin-top: auto;
-    margin-bottom: auto;
-    align-items: flex-start;
-    /* grid-row: 1; */
-    /* grid-column: 2; */
-    /* text-align: right; */
 }
 
 .text p{
@@ -359,6 +354,20 @@ footer{
         font-size: 1.1em;
     }
 
+    .text{
+        justify-content: center;
+        grid-template-columns: 1fr;
+        position: relative;
+        margin-right: 3%;
+        margin-left: 2.5%;
+        margin-top: auto;
+        margin-bottom: auto;
+        align-items: flex-start;
+        /* grid-row: 1; */
+        /* grid-column: 2; */
+        /* text-align: right; */
+    }
+
     .container{
         display: flex;
         border-radius: 10px;
@@ -374,6 +383,12 @@ footer{
         margin: auto;
         max-height: 500px;
         position: relative;
+    }
+
+    .grid div:nth-of-type(2n){
+        /* move the image to the right and the text to the left */
+        display: flex;
+        flex-direction: row-reverse;
     }
 
     .introContainer{
