@@ -300,6 +300,12 @@ dt, dd {
     padding: 2.5%;
 }
 
+dt {
+    font-weight: bold;
+    font-size: 1.75em;
+    padding: auto;
+}
+
 footer{
     /* display: flex; */
     /* padding-top: 50%; */
