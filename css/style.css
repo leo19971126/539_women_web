@@ -4,7 +4,8 @@ body{
 }
 
 .animation:hover{
-    animation: rotate 2s ease-in-out;
+    transform: scale(1.2);
+    transition: transform 1.0s ease-in-out;
 }
 
 h1{
@@ -103,7 +104,7 @@ a {
 }
 
 nav{
-    /* background-color: #282828; */
+    background-color: #282828;
     /* font-size: 1.5em; */
     margin-bottom: 20px;
     width:100%;
@@ -221,13 +222,11 @@ img{
 
 .grid{
     /*Set width, margin, border properties, background color, and grid properties */
-    /* display: grid; */
     width: 90%;
     margin: auto;
     border-radius: 25px;
     grid-column-gap: 5%;
     row-gap: 0.5%;
-    /* margin-bottom: 40%; */
 }
 
 .grid img{
@@ -265,7 +264,7 @@ img{
 }
 
 .container{
-    display: grid;
+    /* display: grid; */
     /* grid-template-columns: 1fr 1fr; */
     margin-bottom: 2%;
     /* grid div */
@@ -341,7 +340,7 @@ footer{
     margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 85%;
+    max-width: 85%;
   }
   
   .close {
@@ -452,7 +451,6 @@ footer{
     }
 
     .introText{
-        /* display: flex; */
         padding-right: 1.3em;
         padding-left: 1.5em;
         position: relative;
@@ -465,7 +463,11 @@ footer{
     .grid img{
         /* Set width, margin, and display */
         width: 50%;
-        /* height: auto; */
+    }
+
+    .grid div:nth-of-type(2n){
+        /* move the image to the right and the text to the left */
+        flex-direction: row;
     }
 }
 

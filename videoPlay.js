@@ -1,5 +1,5 @@
 window.onload = function() {
-    const bellHooks = document.querySelector('.bellHooks');
+    const bellHooks = document.querySelector('.videoPlay');
     const modal = document.querySelector('.modal');
     const modalContent = document.querySelector('.modal-content');
     const close = document.querySelector('.close');
@@ -9,7 +9,9 @@ window.onload = function() {
     });
 
     close.addEventListener('click', () => {
+        const videoFrame = document.querySelector('iframe');
         modal.style.display = 'none';
+        videoFrame.src = '';
     });
 
     window.addEventListener('click', (event) => {
