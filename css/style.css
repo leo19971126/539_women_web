@@ -41,7 +41,6 @@ h3 {
     font-size: 1.25em;
     padding-bottom: 1%;
     padding-top: 2%;
-    /* margin: 5px; */
 }
 
 h4{
@@ -52,8 +51,6 @@ h4{
 
 a.skip{
     padding: 6px;
-    /* -webkit-transition: top 1s ease-out;
-    transition: left 1s ease-out; */
     z-index: 1;
     position: absolute;
     top: -200px;
@@ -105,25 +102,14 @@ a {
 
 nav{
     background-color: #282828;
-    /* font-size: 1.5em; */
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
     width:100%;
     overflow: auto;
     z-index: 999;
     padding-top: 1%;
-    /* padding: 0 50px 0 50px; */
     font-weight: lighter;
     width: 100%;
 }
-
-/* nav ul li{
-    display: inline;
-    margin: 10px 10px 10px 10px;
-    padding: 10px 10px 10px 10px;
-    font-size: 1.5em;
-    color: white;
-    font-weight: 700;
-} */
 
 nav a:link, nav a:visited {
     color: white;
@@ -147,11 +133,6 @@ nav a:hover {
     border-radius: 5px;
     font-weight: bold;
 }
-/* 
-.nav-link{
-    color: white;
-    text-decoration: none;
-} */
 
 .bgimg{
     background-image: url("../images/background_pic.gif");
@@ -172,16 +153,12 @@ img{
 }
 
 .introGrid{
-    /* display: grid;
-    border-radius: 20px;
-    justify-content: center;
-    margin-top: 1%;
-    color: white; */
     margin: auto;
+    display: grid;
 }
 
 .introContainer{
-    display: grid;
+    /* display: flex; */
     background-color: #383838;
     margin-bottom: 2%;
     padding: 2%;
@@ -193,12 +170,13 @@ img{
 
 .introText{
     /* display: flex; */
-    align-items: center;
-    justify-content: center;
-    grid-template-columns: 1fr;
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* grid-template-columns: 1fr 2fr; */
     margin: auto;
     padding-right: 7%;
     padding-left: 7%;
+    padding-bottom: 3%;
     position: relative;
 }
 
@@ -224,18 +202,16 @@ img{
     /*Set width, margin, border properties, background color, and grid properties */
     width: 90%;
     margin: auto;
-    border-radius: 25px;
-    grid-column-gap: 5%;
-    row-gap: 0.5%;
+    /* border-radius: 25px; */
+    /* grid-column-gap: 5%; */
+    /* row-gap: 0.5%; */
 }
 
 .grid img{
     /* Set width, margin, and display */
-    display: block;
+    /* display: grid; */
     width: auto;
     margin: auto;
-    max-height: 500px;
-    position: relative;
     border-radius: 70px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     padding: 0;
@@ -264,10 +240,9 @@ img{
 }
 
 .container{
-    /* display: grid; */
+    display: grid;
     /* grid-template-columns: 1fr 1fr; */
     margin-bottom: 2%;
-    /* grid div */
     border-radius: 10px;
     background-color: white;
     color: black;
@@ -293,7 +268,6 @@ dt, dd {
     display: grid;
     /* grid-template-columns: 1fr 1fr; */
     margin-bottom: 2%;
-    /* grid div */
     border-radius: 10px;
     background-color: white;
     color: black;
@@ -339,34 +313,34 @@ footer{
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
     background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
-  }
+}
 
-  .modal-content {
+.modal-content {
     background-color: #fefefe;
     margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
     max-width: 85%;
-  }
-  
-  .close {
+}
+
+.close {
     color: black;
     float: right;
     font-size: 28px;
     font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
+}
+
+.close:hover,
+.close:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
-  }
+}
 
-  .disclaim{
+.disclaim{
     padding: 10px 5% 5px 5%;
     text-align: justify;
-  }
+}
 
 
 /* mobile view */
@@ -374,7 +348,7 @@ footer{
     nav{
         background-color: #282828;
         font-size: 1.5em;
-        margin-bottom: 20px;
+        margin-bottom: 1.5%;
         width:100%;
         overflow: auto;
         z-index: 999;
@@ -438,13 +412,16 @@ footer{
     }
 
     .introContainer{
-        display: flex;
+        /* display: flex; */
         background-color: #383838;
         margin-bottom: 1%;
-        /* padding-top: 10px;
-        padding-left: 15px;
-        padding-right: 15px;
-        padding-bottom: 20px; */
+    }
+
+    .introGrid{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-row-gap: 1%;
+        grid-column-gap: 1%;
     }
 }
 
@@ -474,6 +451,17 @@ footer{
     .grid div:nth-of-type(2n){
         /* move the image to the right and the text to the left */
         flex-direction: row;
+    }
+
+    .introGrid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-row-gap: 1%;
+        grid-column-gap: 1%;
+    }
+
+    .disclaim{
+        padding-top: 3%;
     }
 }
 
