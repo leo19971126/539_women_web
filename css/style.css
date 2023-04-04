@@ -88,7 +88,12 @@ nav a.current{
     margin: auto;
     margin-top: 20px;
     cursor: pointer;
-  
+}
+
+#videoFrame{
+    width: 90%;
+    height: 720px;
+    border: none;
 }
 
 .videoPlay:hover{
